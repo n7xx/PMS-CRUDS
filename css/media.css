@@ -1,0 +1,14 @@
+@media screen and (max-width: 768px) {
+    input[placeholder] {
+  font-size: 14px;
+}
+label {
+  font-size: 14px;
+}
+.btn {
+    --bs-btn-font-size: 0.9rem;
+}
+.h6 {
+    font-size: 15px;
+}
+}

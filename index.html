@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="./images/favicon.ico" />
+    <meta name="author" content="Nashaat Fathy" />
+    <title>Simple CRUDS System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Icons font aswsome  -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <!-- Sweat Alert for popup -->
+    <link
+      href="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.min.css
+"
+      rel="stylesheet"
+    />
+    <!-- Local Icons -->
+    <link
+      rel="stylesheet"
+      href="./css/bootstrap-icons/bootstrap-icons.min.css"
+    />
+    <!-- CSS files -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <!-- Media file -->
+    <link rel="stylesheet" href="./css/media.css" />
+  </head>
+
+  <body>
+    <h1 class="text-center mt-5 text-capitalize  h3">
+      product <span class="main-color">management</span> system
+    </h1>
+    <div class="w-75 mx-auto mb-4 py-2">
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control border-0 border border-bottom"
+          id="productName"
+          placeholder="Product Name :"
+        />
+        <div class="alert alert-danger p-1 mt-2 d-none">
+          <small>Product name should Start with Captial letter. </small>
+        </div>
+        <label for="productName">Product Name :</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="Number"
+          class="form-control border-0 border border-bottom"
+          id="productPrice"
+          placeholder="Product Price :"
+        />
+        <div class="alert alert-danger p-1 mt-2 d-none">
+          <small>Product price should be from 10 to 100000.</small>
+        </div>
+        <label for="productPrice">Product Price :</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          list="myList"
+          class="form-control border-0 border border-bottom"
+          id="productCategory"
+          placeholder="Product Category :"
+        />
+        <div class="alert alert-danger p-1 mt-2 d-none">
+          <small>Product category should be from Categories list. </small>
+        </div>
+        <label for="productCategory">Product Category :</label>
+        <datalist id="myList">
+          <option value="Mobile" />
+          <option value="Laptop" />
+          <option value="Screens" />
+          <option value="TV" />
+        </datalist>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          type="text"
+          class="form-control border-0 border border-bottom"
+          id="productDescription"
+          placeholder="Product Description :"
+        />
+        <div class="alert alert-danger p-1 mt-2 d-none">
+          <small>Product Description should be From 5 to 15 letters </small>
+        </div>
+        <label for="productDescription">Product Description :</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input
+          accept="image/*"
+          type="file"
+          class="form-control border-0 border border-bottom"
+          id="productImage"
+          placeholder="Product Image :"
+        />
+        <label for="productImage">Product Image :</label>
+      </div>
+      <button
+        onclick="addProdcut();"
+        class="btn btn-info text-white rounded-1 mt-3"
+        id="addBtn"
+        
+      >
+        Add Product
+      </button>
+      <button
+        onclick="updateProduct()"
+        class="btn btn-warning text-white rounded-1 mt-3 d-none"
+        id="updateBtn"
+      >
+        Update Product
+      </button>
+    </div>
+    <div class="container">
+      <input
+        oninput="searchPoducts(this.value)"
+        id="searchInput"
+        type="text"
+        class="form-control mb-4 "
+        placeholder="search by product name . . ."
+      />
+      <input
+        oninput="searchPoductsByCategory(this.value)"
+        id="searchInput"
+        type="text"
+        class="form-control mb-4"
+        placeholder="search by category . . ."
+      />
+      <div class="row py-3" id="productsData"></div>
+    </div>
+    <!-- Bundle BootStrap JS -->
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <!-- Sweet Alert -->
+    <script src="
+https://cdn.jsdelivr.net/npm/sweetalert2@11.14.5/dist/sweetalert2.all.min.js
+"></script>
+    <!-- Custom JS file -->
+    <script src="./js/main.js"></script>
+  </body>
+</html>

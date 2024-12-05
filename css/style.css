@@ -1,0 +1,29 @@
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+.form-control:focus {
+  box-shadow: none;
+  outline: 0;
+  border-color: #8e3ac689;
+}
+.fs-7 {
+  font-size: 14px;
+}
+
+.product img {
+  height: 150px;
+  object-fit: contain;
+}
+.main-color {
+  color: #8e3ac6;
+}
+
+#addBtn {
+  --bs-btn-bg: #9746cd;
+  --bs-btn-border-color: #9746cd;
+  --bs-btn-hover-bg: #8e3ac6;
+  --bs-btn-hover-border-color: #8e3ac6;
+  --bs-btn-active-bg: #9746cd;
+  --bs-btn-active-border-color: #9746cd;
+}
